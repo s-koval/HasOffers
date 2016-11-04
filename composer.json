@@ -1,0 +1,50 @@
+{
+    "name": "faustbrian/grasp-virustotal",
+    "description": "A VirusTotal Client for Grasp",
+    "keywords": [
+        "api",
+        "grasp",
+        "grasp-virustotal",
+        "virustotal",
+        "Brian Faust",
+        "faustbrian"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@brianfaust.de",
+        "homepage": "https://brianfaust.de",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "faustbrian/grasp": "^1.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.1",
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "^5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianFaust\\Grasp\\VirusTotal\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\Grasp\\VirusTotal\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
