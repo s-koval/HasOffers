@@ -1,47 +1,61 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Billing extends Base
+class Billing extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'AffiliateBilling';
+    public $target = 'AffiliateBilling';
 
     public function findAllInvoices($parameters = [])
     {
-        return $this->get('findAllInvoices', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllInvoices');
     }
 
     public function findAllReceipts($parameters = [])
     {
-        return $this->get('findAllReceipts', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllReceipts');
     }
 
     public function findInvoiceById($parameters = [])
     {
-        return $this->get('findInvoiceById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findInvoiceById');
     }
 
     public function findReceiptById($parameters = [])
     {
-        return $this->get('findReceiptById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findReceiptById');
     }
 
     public function getAccountBalance($parameters = [])
     {
-        return $this->get('getAccountBalance', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAccountBalance');
     }
 
     public function getPayoutTotals($parameters = [])
     {
-        return $this->get('getPayoutTotals', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getPayoutTotals');
     }
 
     public function updateTaxId($parameters = [])
     {
-        return $this->get('updateTaxId', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updateTaxId');
     }
 }

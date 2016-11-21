@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Offer;
+namespace Grasp\HasOffers\Api\Affiliate\Offer;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Targeting extends Base
+class Targeting extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'OfferTargeting';
+    public $target = 'OfferTargeting';
 
     public function getRuleTargetingForOffer($parameters = [])
     {
-        return $this->get('getRuleTargetingForOffer', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getRuleTargetingForOffer');
     }
 }

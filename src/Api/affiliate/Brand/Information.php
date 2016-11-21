@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Brand;
+namespace Grasp\HasOffers\Api\Affiliate\Brand;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Information extends Base
+class Information extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'BrandInformation';
+    public $target = 'BrandInformation';
 
     public function getBrandInformation($parameters = [])
     {
-        return $this->get('getBrandInformation', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getBrandInformation');
     }
 }

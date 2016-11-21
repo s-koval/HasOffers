@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class RingRevenue extends Base
+class RingRevenue extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'RingRevenue';
+    public $target = 'RingRevenue';
 
     public function createAffiliateLoginUrl($parameters = [])
     {
-        return $this->get('createAffiliateLoginUrl', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('createAffiliateLoginUrl');
     }
 }

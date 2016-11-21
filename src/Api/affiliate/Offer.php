@@ -1,82 +1,109 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Offer extends Base
+class Offer extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
-
-    protected $endpointName = 'Offer';
+    public $type = 'Affiliate';
+    public $target = 'Offer';
 
     public function acceptOfferTermsAndConditions($parameters = [])
     {
-        return $this->get('acceptOfferTermsAndConditions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('acceptOfferTermsAndConditions');
     }
 
     public function findAll($parameters = [])
     {
-        return $this->get('findAll', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAll');
     }
 
     public function findAllFeaturedOfferIds($parameters = [])
     {
-        return $this->get('findAllFeaturedOfferIds', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllFeaturedOfferIds');
     }
 
     public function findByCreativeType($parameters = [])
     {
-        return $this->get('findByCreativeType', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findByCreativeType');
     }
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 
     public function findMyOffers($parameters = [])
     {
-        return $this->get('findMyOffers', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findMyOffers');
     }
 
     public function generateTrackingLink($parameters = [])
     {
-        return $this->get('generateTrackingLink', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('generateTrackingLink');
     }
 
     public function getApprovalQuestions($parameters = [])
     {
-        return $this->get('getApprovalQuestions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getApprovalQuestions');
     }
 
     public function getCategories($parameters = [])
     {
-        return $this->get('getCategories', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getCategories');
     }
 
     public function getPayoutDetails($parameters = [])
     {
-        return $this->get('getPayoutDetails', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getPayoutDetails');
     }
 
     public function getPixels($parameters = [])
     {
-        return $this->get('getPixels', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getPixels');
     }
 
     public function getTargetCountries($parameters = [])
     {
-        return $this->get('getTargetCountries', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getTargetCountries');
     }
 
     public function getThumbnail($parameters = [])
     {
-        return $this->get('getThumbnail', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getThumbnail');
     }
 
     public function requestOfferAccess($parameters = [])
     {
-        return $this->get('requestOfferAccess', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('requestOfferAccess');
     }
 }

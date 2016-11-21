@@ -1,42 +1,54 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class User extends Base
+class User extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'AffiliateUser';
+    public $target = 'AffiliateUser';
 
     public function create($parameters = [])
     {
-        return $this->get('create', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('create');
     }
 
     public function findAll($parameters = [])
     {
-        return $this->get('findAll', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAll');
     }
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 
     public function getContext($parameters = [])
     {
-        return $this->get('getContext', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getContext');
     }
 
     public function setPermissions($parameters = [])
     {
-        return $this->get('setPermissions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('setPermissions');
     }
 
     public function update($parameters = [])
     {
-        return $this->get('update', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('update');
     }
 }

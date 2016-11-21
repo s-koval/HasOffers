@@ -1,27 +1,33 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class ApiKey extends Base
+class ApiKey extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'ApiKey';
+    public $target = 'ApiKey';
 
     public function generateApiKey($parameters = [])
     {
-        return $this->get('generateApiKey', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('generateApiKey');
     }
 
     public function getUserApiKey($parameters = [])
     {
-        return $this->get('getUserApiKey', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getUserApiKey');
     }
 
     public function regenerateApiKey($parameters = [])
     {
-        return $this->get('regenerateApiKey', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('regenerateApiKey');
     }
 }

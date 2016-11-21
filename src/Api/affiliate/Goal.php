@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Goal extends Base
+class Goal extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'Goal';
+    public $target = 'Goal';
 
     public function findAll($parameters = [])
     {
-        return $this->get('findAll', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAll');
     }
 }

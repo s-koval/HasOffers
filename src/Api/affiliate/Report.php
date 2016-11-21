@@ -1,32 +1,40 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Report extends Base
+class Report extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'Report';
+    public $target = 'Report';
 
     public function getAffiliateCommissions($parameters = [])
     {
-        return $this->get('getAffiliateCommissions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAffiliateCommissions');
     }
 
     public function getAffiliateReferrals($parameters = [])
     {
-        return $this->get('getAffiliateReferrals', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAffiliateReferrals');
     }
 
     public function getConversions($parameters = [])
     {
-        return $this->get('getConversions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getConversions');
     }
 
     public function getStats($parameters = [])
     {
-        return $this->get('getStats', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getStats');
     }
 }

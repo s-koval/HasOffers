@@ -1,32 +1,40 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Application extends Base
+class Application extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'Application';
+    public $target = 'Application';
 
     public function findAllCountries($parameters = [])
     {
-        return $this->get('findAllCountries', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllCountries');
     }
 
     public function findAllHostnames($parameters = [])
     {
-        return $this->get('findAllHostnames', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllHostnames');
     }
 
     public function findAllOfferCategories($parameters = [])
     {
-        return $this->get('findAllOfferCategories', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllOfferCategories');
     }
 
     public function findAllTimezones($parameters = [])
     {
-        return $this->get('findAllTimezones', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllTimezones');
     }
 }

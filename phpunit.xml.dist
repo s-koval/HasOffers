@@ -16,7 +16,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="VirusTotal PHP Client Test Suite">
+        <testsuite name="HasOffers PHP Client Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

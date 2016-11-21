@@ -1,14 +1,7 @@
 {
-    "name": "faustbrian/grasp-virustotal",
-    "description": "A VirusTotal Client for Grasp",
-    "keywords": [
-        "api",
-        "grasp",
-        "grasp-virustotal",
-        "virustotal",
-        "Brian Faust",
-        "faustbrian"
-    ],
+    "name": "grasp/hasoffers",
+    "description": "A HasOffers Client for Grasp",
+    "keywords": ["api", "Grasp", "Grasp-HasOffers", "HasOffers", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
@@ -18,7 +11,7 @@
     }],
     "require": {
         "php": "^5.6 || ^7.0",
-        "faustbrian/grasp": "^1.0"
+        "grasp/grasp": "dev-master"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.1",
@@ -29,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Grasp\\VirusTotal\\": "src"
+            "Grasp\\HasOffers\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Grasp\\VirusTotal\\": "tests"
+            "Grasp\\HasOffers\\Tests\\": "tests"
         }
     },
     "config": {

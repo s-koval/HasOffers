@@ -1,27 +1,33 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class SavedReports extends Base
+class SavedReports extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'SavedReports';
+    public $target = 'SavedReports';
 
     public function delete($parameters = [])
     {
-        return $this->get('delete', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('delete');
     }
 
     public function findAll($parameters = [])
     {
-        return $this->get('findAll', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAll');
     }
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 }

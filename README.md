@@ -1,4 +1,4 @@
-# Grasp - VirusTotal Client
+# Grasp - HasOffers Client
 
 ## Installation
 
@@ -10,10 +10,14 @@ $ composer require faustbrian/grasp-virustotal
 
 ## Usage
 
-```php$client = new BrianFaust\Grasp\VirusTotal\Client();
-$client->setConfig(['apiKey' => 'YOUR_API_KEY']);
+```php
+$client = new Grasp\HasOffers\Client();
+$client->setConfig([
+    'apiKey' => 'YOUR_API_KEY',
+    'networkId' => 'NETWORK_ID',
+]);
 
-$response = $client->api('File')->scan('infected.rar');
+$response = $client->api('Affiliate\Offer')->findAll(['limit' => 5]);
 
 dump($response);
 ```

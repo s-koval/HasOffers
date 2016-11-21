@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Brand;
+namespace Grasp\HasOffers\Api\Affiliate\Brand;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Design extends Base
+class Design extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'BrandDesign';
+    public $target = 'BrandDesign';
 
     public function getTermsAndConditions($parameters = [])
     {
-        return $this->get('getTermsAndConditions', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getTermsAndConditions');
     }
 }

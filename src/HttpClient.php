@@ -1,18 +1,22 @@
 <?php
 
-namespace BrianFaust\Grasp\VirusTotal;
+namespace Grasp\HasOffers;
 
-use BrianFaust\Grasp\AbstractHttpClient;
-use BrianFaust\Grasp\VirusTotal\Request\Modifiers\ApiKeyModifier;
+use Grasp\AbstractHttpClient;
 
 class HttpClient extends AbstractHttpClient
 {
+    /** @var array */
     protected $options = [
-        'base_uri' => 'https://www.virustotal.com/vtapi/v2/',
-        'headers' => [
-           'User-Agent' => 'VirusTotal-PHP-Client/0.1.0',
+        'base_uri' => 'https://api.hasoffers.com/',
+        'headers'  => [
+           'User-Agent' => 'Grasp\HasOffers',
         ],
     ];
 
-    protected $requestModifiers = [ApiKeyModifier::class];
+    /** @var array */
+    protected $requestModifiers = [
+        Modifiers\AffiliateModifier::class,
+        Modifiers\NetworkModifier::class,
+    ];
 }

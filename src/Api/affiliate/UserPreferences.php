@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class UserPreferences extends Base
+class UserPreferences extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'UserPreferences';
+    public $target = 'UserPreferences';
 
     public function setValue($parameters = [])
     {
-        return $this->get('setValue', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('setValue');
     }
 }

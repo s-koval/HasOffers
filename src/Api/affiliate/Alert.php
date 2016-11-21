@@ -1,27 +1,33 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Alert extends Base
+class Alert extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'Alert';
+    public $target = 'Alert';
 
     public function dismissAffiliateUserAlert($parameters = [])
     {
-        return $this->get('dismissAffiliateUserAlert', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('dismissAffiliateUserAlert');
     }
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 
     public function getAffiliateUserAlerts($parameters = [])
     {
-        return $this->get('getAffiliateUserAlerts', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAffiliateUserAlerts');
     }
 }

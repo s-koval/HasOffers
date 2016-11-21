@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Grasp\VirusTotal;
+namespace Grasp\HasOffers;
 
-use BrianFaust\Grasp\AbstractClient;
+use Grasp\AbstractClient;
 
 class Client extends AbstractClient
 {

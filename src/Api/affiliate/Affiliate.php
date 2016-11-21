@@ -1,72 +1,96 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class Affiliate extends Base
+class Affiliate extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'Affiliate';
+    public $target = 'Affiliate';
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 
     public function getAccountBalance($parameters = [])
     {
-        return $this->get('getAccountBalance', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAccountBalance');
     }
 
     public function getAccountManager($parameters = [])
     {
-        return $this->get('getAccountManager', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getAccountManager');
     }
 
     public function getPayoneerSignupUrl($parameters = [])
     {
-        return $this->get('getPayoneerSignupUrl', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getPayoneerSignupUrl');
     }
 
     public function getReferralCommission($parameters = [])
     {
-        return $this->get('getReferralCommission', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getReferralCommission');
     }
 
     public function update($parameters = [])
     {
-        return $this->get('update', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('update');
     }
 
     public function updatePaymentMethodCheck($parameters = [])
     {
-        return $this->get('updatePaymentMethodCheck', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodCheck');
     }
 
     public function updatePaymentMethodDirectDeposit($parameters = [])
     {
-        return $this->get('updatePaymentMethodDirectDeposit', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodDirectDeposit');
     }
 
     public function updatePaymentMethodOther($parameters = [])
     {
-        return $this->get('updatePaymentMethodOther', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodOther');
     }
 
     public function updatePaymentMethodPaypal($parameters = [])
     {
-        return $this->get('updatePaymentMethodPaypal', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodPaypal');
     }
 
     public function updatePaymentMethodPayQuicker($parameters = [])
     {
-        return $this->get('updatePaymentMethodPayQuicker', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodPayQuicker');
     }
 
     public function updatePaymentMethodWire($parameters = [])
     {
-        return $this->get('updatePaymentMethodWire', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updatePaymentMethodWire');
     }
 }

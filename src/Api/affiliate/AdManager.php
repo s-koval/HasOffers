@@ -1,57 +1,75 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class AdManager extends Base
+class AdManager extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'AdManager';
+    public $target = 'AdManager';
 
     public function addCreative($parameters = [])
     {
-        return $this->get('addCreative', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('addCreative');
     }
 
     public function createCampaign($parameters = [])
     {
-        return $this->get('createCampaign', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('createCampaign');
     }
 
     public function findAllCampaigns($parameters = [])
     {
-        return $this->get('findAllCampaigns', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllCampaigns');
     }
 
     public function findAllCreatives($parameters = [])
     {
-        return $this->get('findAllCreatives', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAllCreatives');
     }
 
     public function findCampaignById($parameters = [])
     {
-        return $this->get('findCampaignById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findCampaignById');
     }
 
     public function getCampaignCode($parameters = [])
     {
-        return $this->get('getCampaignCode', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getCampaignCode');
     }
 
     public function getCampaignCreatives($parameters = [])
     {
-        return $this->get('getCampaignCreatives', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getCampaignCreatives');
     }
 
     public function updateCampaign($parameters = [])
     {
-        return $this->get('updateCampaign', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updateCampaign');
     }
 
     public function updateCreativeField($parameters = [])
     {
-        return $this->get('updateCreativeField', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('updateCreativeField');
     }
 }

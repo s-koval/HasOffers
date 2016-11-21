@@ -1,13 +1,13 @@
 <?php
 
-namespace BrianFaust\Grasp\VirusTotal;
+namespace Grasp\HasOffers;
 
-use BrianFaust\Grasp\ServiceProvider as AbstractServiceProvider;
+use Grasp\AbstractServiceProvider;
 
 class ServiceProvider extends AbstractServiceProvider
 {
-    protected function getHttpClient()
+    public function getIdentifier()
     {
-        return HttpClient::class;
+        return 'grasp.hasoffers';
     }
 }

@@ -1,17 +1,19 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate;
+namespace Grasp\HasOffers\Api\Affiliate;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class ScheduledOfferChange extends Base
+class ScheduledOfferChange extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'ScheduledOfferChange';
+    public $target = 'ScheduledOfferChange';
 
     public function findSchedules($parameters = [])
     {
-        return $this->get('findSchedules', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findSchedules');
     }
 }

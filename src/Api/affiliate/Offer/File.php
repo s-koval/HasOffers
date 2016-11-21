@@ -1,32 +1,40 @@
 <?php
 
-namespace BrianFaust\Grasp\HasOffers\Api\Affiliate\Offer;
+namespace Grasp\HasOffers\Api\Affiliate\Offer;
 
-use BrianFaust\HasOffers\Base;
+use Grasp\AbstractApi;
 
-class File extends Base
+class File extends AbstractApi
 {
-    protected $endpointType = 'Affiliate';
+    public $type = 'Affiliate';
 
-    protected $endpointName = 'OfferFile';
+    public $target = 'OfferFile';
 
     public function create($parameters = [])
     {
-        return $this->get('create', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('create');
     }
 
     public function findAll($parameters = [])
     {
-        return $this->get('findAll', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findAll');
     }
 
     public function findById($parameters = [])
     {
-        return $this->get('findById', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('findById');
     }
 
     public function getCreativeCode($parameters = [])
     {
-        return $this->get('getCreativeCode', $parameters);
+        $this->setQuery($parameters);
+
+        return $this->get('getCreativeCode');
     }
 }
