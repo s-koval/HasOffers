@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Grasp HasOffers.
+ * This file is part of Rulerr HasOffers.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Grasp\HasOffers\Modifiers;
+namespace Rulerr\HasOffers\Modifiers;
 
-use Grasp\Modifiers\AbstractModifier;
+use Rulerr\Modifiers\AbstractModifier;
 
 class NetworkModifier extends AbstractModifier
 {

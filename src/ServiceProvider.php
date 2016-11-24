@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Grasp HasOffers.
+ * This file is part of Rulerr HasOffers.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Grasp\HasOffers;
+namespace Rulerr\HasOffers;
 
-use Grasp\AbstractServiceProvider;
+use Rulerr\AbstractServiceProvider;
 
 class ServiceProvider extends AbstractServiceProvider
 {
     public function getIdentifier()
     {
-        return 'grasp.hasoffers';
+        return 'rulerr.hasoffers';
     }
 }

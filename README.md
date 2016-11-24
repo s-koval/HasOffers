@@ -1,17 +1,17 @@
-# Grasp - HasOffers Client
+# Rulerr - HasOffers Client
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require grasp/hasoffers
+$ composer require rulerr/hasoffers
 ```
 
 ## Usage
 
 ```php
-$client = new Grasp\HasOffers\Client();
+$client = new Rulerr\HasOffers\Client();
 $client->setConfig([
     'apiKey' => 'YOUR_API_KEY',
     'networkId' => 'NETWORK_ID',

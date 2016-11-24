@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Grasp HasOffers.
+ * This file is part of Rulerr HasOffers.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Grasp\HasOffers;
+namespace Rulerr\HasOffers;
 
-use Grasp\AbstractHttpClient;
+use Rulerr\AbstractHttpClient;
 
 class HttpClient extends AbstractHttpClient
 {
@@ -19,7 +19,7 @@ class HttpClient extends AbstractHttpClient
     protected $options = [
         'base_uri' => 'https://api.hasoffers.com/',
         'headers'  => [
-           'User-Agent' => 'Grasp\HasOffers',
+           'User-Agent' => 'Rulerr\HasOffers',
         ],
     ];
 

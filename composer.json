@@ -1,7 +1,7 @@
 {
-    "name": "grasp/hasoffers",
-    "description": "A HasOffers Client for Grasp",
-    "keywords": ["api", "Grasp", "Grasp-HasOffers", "HasOffers", "Brian Faust", "faustbrian"],
+    "name": "rulerr/hasoffers",
+    "description": "A HasOffers Client for Rulerr",
+    "keywords": ["api", "Rulerr", "Rulerr-HasOffers", "HasOffers", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
@@ -10,7 +10,7 @@
     }],
     "require": {
         "php": "^7.0",
-        "grasp/grasp": "dev-master"
+        "rulerr/rulerr": "dev-master"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Grasp\\HasOffers\\": "src"
+            "Rulerr\\HasOffers\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Grasp\\Tests\\HasOffers\\": "tests"
+            "Rulerr\\Tests\\HasOffers\\": "tests"
         }
     },
     "config": {

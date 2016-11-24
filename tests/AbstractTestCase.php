@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Grasp HasOffers.
+ * This file is part of Rulerr HasOffers.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Grasp\HasOffers\Tests;
+namespace Rulerr\HasOffers\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
 
