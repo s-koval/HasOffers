@@ -18,7 +18,7 @@ class HttpClient extends AbstractHttpClient
     /** @var array */
     protected $options = [
         'base_uri' => 'https://api.hasoffers.com/',
-        'headers'  => [
+        'headers' => [
            'User-Agent' => 'Rulerr\HasOffers',
         ],
     ];
